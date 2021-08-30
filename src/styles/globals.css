@@ -1,0 +1,11 @@
+@tailwind base;
+
+@import "prism.css";
+
+.code-highlight {
+  @apply bg-yellow-300 bg-opacity-25 shadow-sm rounded-sm p-0.5;
+}
+
+@tailwind components;
+@tailwind utilities;
+
