@@ -1,0 +1,39 @@
+## Basic Layout
+
+Often we want a simple navbar, a content section and a footer. The navbar and footer should stay the same height
+where the content section should grow.
+
+<div className="flex flex-col shadow-lg rounded-md">
+  <nav className="rounded-t-md text-white font-medium px-3 py-2 bg-gradient-to-br from-pink-400 to-purple-500">
+    Navbar
+  </nav>
+  <main className="text-white font-medium px-3 py-10 bg-gradient-to-r from-emerald-400 to-teal-500">
+    Content
+  </main>
+  <footer className="text-white rounded-b-md font-medium px-3 py-2 bg-gradient-to-tr from-yellow-400 to-yellow-500">
+    Footer
+  </footer>
+</div>
+
+In order to achieve this layout we can do this:
+
+```html
+<div class="**flex flex-col min-h-screen**">
+  <nav>Navbar</nav>
+  <main class="**flex-grow**">content</main>
+  <footer>Footer</footer>
+</div>
+```
+
+### Sticky Navbar
+
+In order to create a sticky navbar you can use the same layout as above and add the `sticky` class.
+
+```diff-html
+  <div class="flex flex-col min-h-screen">
+-   <nav>Navbar</nav>
++   <nav class="sticky top-0">Navbar</nav>
+    <main class="flex-grow">content</main>
+    <footer>Footer</footer>
+  </div>
+```
