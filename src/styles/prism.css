@@ -3,7 +3,7 @@
 .token.selector,
 .token.selector .class,
 .token.function {
-  @apply text-fuchsia-400;
+  @apply text-cyan-200;
 }
 
 .token.attr-name,
@@ -12,7 +12,7 @@
 .token.operator,
 .token.pseudo-class,
 .token.important {
-  @apply text-cyan-400;
+  @apply text-lime-300;
 }
 
 .token.attr-value,
@@ -21,7 +21,7 @@
 .token.number,
 .token.unit,
 .token.color {
-  @apply text-lime-300;
+  @apply text-amber-200;
 }
 
 .token.punctuation,
@@ -52,7 +52,7 @@
 
 .token.deleted:not(.prefix)::after {
   content: '';
-  @apply pointer-events-none absolute inset-0 block bg-rose-400 bg-opacity-25;
+  @apply pointer-events-none absolute inset-0 block bg-rose-500 bg-opacity-25;
 }
 
 .token.deleted.prefix {
