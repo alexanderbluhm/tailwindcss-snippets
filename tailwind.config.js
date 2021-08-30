@@ -10,7 +10,7 @@ module.exports = {
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    colors: colors,
+    colors: {...colors, "transparent": "transparent"},
     extend: {},
   },
   variants: {
