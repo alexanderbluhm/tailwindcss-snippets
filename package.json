@@ -23,6 +23,7 @@
   "devDependencies": {
     "@tailwindcss/typography": "^0.4.1",
     "@types/react": "^17.0.19",
+    "@types/webpack-env": "^1.16.2",
     "autoprefixer": "^10.3.3",
     "postcss": "^8.3.6",
     "tailwindcss": "^2.2.9",
