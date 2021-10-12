@@ -1,5 +1,5 @@
 import { BasicLayout } from "@/layouts/BasicLayout";
-import React from "react";
+import React, {useState} from "react";
 import Link from "next/link";
 import { createPageList } from "@/utils/createPageList";
 import Head from 'next/head';
@@ -16,6 +16,8 @@ const pages = createPageList(
 interface Props {}
 
 const Home = (props: Props) => {
+  const [search, setSearch] = useState('');
+
   return (
     <BasicLayout>
       <Head>
@@ -33,18 +35,19 @@ const Home = (props: Props) => {
       </Head>
 
       <div className="max-w-[65ch] mx-auto">
-        <h1 className="text-3xl font-bold text-center text-black">
-          Tailwind Snippets
+        <h1 className="text-lg font-medium tracking-tight text-black">
+          TailwindCSS Shorts
         </h1>
-        <h2 className="mt-6 text-gray-500">
+        <h2 className="mt-2 text-gray-500">
           A collection of useful TailwindCSS content including tricks, simple
           code examples and explanations.
         </h2>
       </div>
 
-      <section className="mt-12 max-w-[65ch] mx-auto">
-        <ul className="divide-y">
-          {Object.keys(pages).map((pageKey) => (
+      <section className="mt-10 max-w-[65ch] mx-auto">
+        <input value={search} onChange={e => setSearch(e.target.value)} className="w-full px-3 py-1.5 ring-1 ring-gray-200 rounded" placeholder="Search ..." type="text" />
+        <ul className="mt-4 divide-y">
+          {Object.keys(pages).filter(key => pages[key].title.toLowerCase().includes(search.toLowerCase())).map((pageKey) => (
             <li className="py-2" key={pageKey}>
               <Link href={pages[pageKey].href}>
                 <a className="flex flex-col space-y-1">
