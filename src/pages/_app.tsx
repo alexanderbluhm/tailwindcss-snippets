@@ -22,7 +22,9 @@ function MyApp({ Component, pageProps }) {
           content={description}
         />
       </Head>
-      <Component {...pageProps} />
+      <div className="text-gray-900 transition-colors dark:bg-gray-900 dark:text-white">
+        <Component {...pageProps} />
+      </div>
     </>
   );
 }
