@@ -1,0 +1,40 @@
+## Place Center
+
+There are different methods to place items center. Here are a few:
+
+### Using Grid
+
+<div class="grid w-32 h-32 mx-auto rounded-md shadow-md bg-gradient-to-br from-purple-400 to-indigo-500 place-items-center">
+    <div class="w-12 h-12 bg-white rounded"></div>
+</div>
+
+```html
+<div class="grid place-items-center">
+    <!-- ... -->
+</div>
+```
+**Watch out here for the browser support**
+
+## Using Flexbox
+
+<div class="flex items-center justify-center w-32 h-32 mx-auto rounded-md shadow-md bg-gradient-to-br from-red-400 to-pink-500">
+    <div class="w-12 h-12 bg-white rounded"></div>
+</div>
+
+```html
+<div class="flex items-center justify-center">
+    <!-- ... -->
+</div>
+```
+
+## Using `absolute`
+
+<div class="relative w-32 h-32 mx-auto rounded-md shadow-md bg-gradient-to-br from-red-400 to-pink-500">
+    <div class="absolute w-12 h-12 -translate-x-1/2 -translate-y-1/2 bg-white rounded left-1/2 top-1/2"></div>
+</div>
+
+```html
+<div>
+    <div class="absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2"></div>
+</div>
+```

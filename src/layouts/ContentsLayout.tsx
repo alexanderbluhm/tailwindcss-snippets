@@ -4,7 +4,7 @@ interface Props {}
 
 export const ContentsLayout: React.FC<Props> = (props) => {
   return (
-    <main className="max-w-7xl mx-auto flex items-center px-4 lg:px-8 py-8">
+    <main className="flex items-center px-4 py-16 mx-auto max-w-7xl lg:px-8">
       {props.children}
     </main>
   );
