@@ -1,0 +1,27 @@
+## Full Bleed Element
+
+If you want to make an element full screen width within a text flow, you can use this trick to achieve the effect:
+
+<div className="space-y-4 mx-auto w-full">
+    <div class="w-full h-4 bg-gray-200 rounded-full"></div>
+    <div class="w-full h-4 bg-gray-200 rounded-full"></div>
+    <div class="w-full h-4 bg-gray-200 rounded-full"></div>
+    <div class="w-full h-4 bg-gray-200 rounded-full"></div>
+    <div class="h-8 ml-[50%] w-screen -translate-x-1/2 px-12">
+        <div class="h-full bg-green-500 rounded-md"></div>
+    </div>
+    <div class="w-screen h-8 px-12">
+        <div class="h-full bg-red-500 rounded-md"></div>
+    </div>
+    <div class="w-full h-4 bg-gray-200 rounded-full"></div>
+    <div class="w-full h-4 bg-gray-200 rounded-full"></div>
+    <div class="w-full h-4 bg-gray-200 rounded-full"></div>
+</div>
+
+```diff-html
+ <div class="w-full mx-auto space-y-4">
++    <div class="h-8 ml-[50%] w-screen -translate-x-1/2 px-12">
+         <div class="h-full bg-green-500 rounded-md"></div>
+     </div>
+ </div>
+```
