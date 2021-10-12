@@ -1,0 +1,29 @@
+## Stacking Context
+
+We want our text to stay on top of the circle.
+
+<div class="relative w-full h-20">
+    <div class="absolute top-0 left-0 w-16 h-16 rounded-full bg-gradient-to-br from-indigo-200 to-purple-300 bg-opacity-90"></div>
+    <p class="w-32 h-4 bg-gray-900 rounded-full"></p>
+</div>
+
+```html
+<div class="relative w-full h-20">
+    <div class="**absolute** top-0 left-0 w-16 h-16 bg-gradient-to-br from-indigo-200 to-purple-300 rounded-full bg-opacity-90"></div>
+    <p class="w-32 h-4 bg-gray-900 rounded-full"></p>
+</div>
+```
+
+In order to solve this we have to add `relative` to the text container.
+
+<div class="relative w-full h-20">
+    <div class="absolute top-0 left-0 w-16 h-16 rounded-full bg-gradient-to-br from-indigo-200 to-purple-300 bg-opacity-90"></div>
+    <p class="relative w-32 h-4 bg-gray-900 rounded-full"></p>
+</div>
+
+```html
+<div class="relative w-full h-20">
+    <div class="absolute top-0 left-0 w-16 h-16 rounded-full bg-gradient-to-br from-indigo-200 to-purple-300 bg-opacity-90"></div>
+    <p class="**relative** w-32 h-4 bg-gray-900 rounded-full"></p>
+</div>
+```
