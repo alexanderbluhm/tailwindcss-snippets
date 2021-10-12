@@ -3,5 +3,5 @@ import React from "react";
 interface Props {}
 
 export const BasicLayout: React.FC<Props> = (props) => {
-  return <main className="max-w-7xl mx-auto px-4 lg:px-8 py-8">{props.children}</main>;
+  return <main className="px-4 py-8 mx-auto max-w-7xl lg:px-8 lg:py-12">{props.children}</main>;
 };

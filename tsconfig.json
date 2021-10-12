@@ -16,7 +16,8 @@
     "baseUrl": "node_modules",
     "paths": {
       "@/components/*": ["../src/components/*"],
-      "@/layouts/*": ["../src/layouts/*"]
+      "@/layouts/*": ["../src/layouts/*"],
+      "@/utils/*": ["../src/utils/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
