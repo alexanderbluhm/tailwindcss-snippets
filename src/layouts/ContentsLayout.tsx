@@ -2,9 +2,8 @@ import React from "react";
 import Link from "next/link";
 
 export const ContentsLayout = (props) => {
-  console.log(props);
   return (
-    <main className="px-4 py-16 mx-auto max-w-[65ch] lg:px-8 bg-white">
+    <main className="px-4 py-8 lg:py-16 mx-auto max-w-[65ch] overflow-hidden lg:px-8 bg-white">
       <div className="flex flex-col">
         <Link href="/">
           <a className="inline-flex items-center text-sm group">
@@ -14,10 +13,10 @@ export const ContentsLayout = (props) => {
             >
               <g
                 fill="none"
-                fill-rule="evenodd"
+                fillRule="evenodd"
                 stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 transform="translate(3 6)"
               >
                 <path d="m4.499.497-3.999 4.002 4 4.001" />
@@ -31,7 +30,7 @@ export const ContentsLayout = (props) => {
           {props.meta.title}
         </span> */}
       </div>
-      <div className="flex items-center">{props.children}</div>
+      <div>{props.children}</div>
     </main>
   );
 };

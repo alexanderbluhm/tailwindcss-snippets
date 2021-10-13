@@ -10,11 +10,11 @@ function MyApp({ Component, pageProps }) {
     : {};
   const meta = Component.layoutProps?.meta || {};
   const description =
-    meta.metaDescription || meta.description || "TailwindCSS Snippets.";
+    meta.metaDescription || meta.description || "TailwindCSS Shorts.";
 
   return (
     <>
-      <Title suffix="Tailwind Snippets">{meta.title}</Title>
+      <Title suffix="Tailwind Shorts">{meta.title}</Title>
       <Head>
         <meta
           key="og:description"

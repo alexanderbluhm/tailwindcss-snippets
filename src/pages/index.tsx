@@ -24,15 +24,15 @@ const Home = (props: Props) => {
         <meta
           key="twitter:title"
           name="twitter:title"
-          content="Tailwind Snippets - Collection of useful TailwindCSS content."
+          content="TailwindCSS Shorts - Collection of useful TailwindCSS content."
         />
         <meta
           key="og:title"
           property="og:title"
-          content="Tailwind Snippets - Collection of useful TailwindCSS content."
+          content="TailwindCSS Shorts - Collection of useful TailwindCSS content."
         />
         <title>
-          Tailwind Snippets - Collection of useful TailwindCSS content.
+          TailwindCSS Shorts - Collection of useful TailwindCSS content.
         </title>
       </Head>
 
