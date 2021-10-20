@@ -1,0 +1,33 @@
+---
+title: Print Screen
+description: Simple trick to design for printing.
+featured: true
+---
+
+## Print Screen
+
+<div className="p-4 print:p-12 rounded border bg-white print:bg-gradient-to-br from-green-500 to-emerald-600 print:text-white">
+    Print Me!
+</div>
+
+We can **extend** the default screens and add a `print` screen:
+
+```diff-js
+ // tailwind.config.js
+ module.exports = {
+   theme: {
+     extend: {
+       screens: {
++        'print': {'raw': 'print'},
+         // => @media print { ... }
+       }
+     }
+   }
+ }
+```
+
+Now we can use the prefix `:print` to apply styles only when printing.
+
+```html
+<div class="text-blue-500 **print:text-black** bg-blue-50 **print:bg-white**"></div>
+```
